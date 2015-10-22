@@ -1,1 +1,348 @@
-foo
+<html>
+<head>
+        <title>StackEdit – Editor</title>
+        <link rel="canonical" href="https://stackedit.io/editor">
+        <link rel="icon" href="https://stackedit.io/res-min/img/stackedit-32.ico" type="image/x-icon">
+        <link rel="icon" sizes="192x192" href="https://stackedit.io/res-min/img/logo-highres.png">
+        <link rel="shortcut icon" href="https://stackedit.io/res-min/img/stackedit-32.ico" type="image/x-icon">
+        <link rel="shortcut icon" sizes="192x192" href="https://stackedit.io/res-min/img/logo-highres.png">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://stackedit.io/res-min/img/logo-ipad-retina.png">
+        <meta charset="UTF-8">
+        <meta name="description" content="Full-featured, open-source Markdown editor based on PageDown, the Markdown library used by Stack Overflow and the other Stack Exchange sites.">
+        <meta name="author" content="Benoit Schweblin">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="msvalidate.01" content="5E47EE6F67B069C17E3CDD418351A612">
+        <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.MjvbomibPDY.O/m=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCMv2uNNfbHhxoA0F4tdI8hGLTg2xQ/t=zcms/cb=gapi.loaded_0" async=""></script><script>
+            // Use ?debug to serve original JavaScript files instead of minified
+            window.baseDir = 'res';
+            if (!/(\?|&)debug($|&)/.test(location.search)) {
+                window.baseDir += '-min';
+            }
+            window.require = {
+                baseUrl: window.baseDir,
+                deps: ['main']
+            };
+        </script>
+        <script src="https://stackedit.io/res-min/require.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="https://stackedit.io/res-min/main.js"></script><link type="text/css" rel="stylesheet" href="https://stackedit.io/res-min/themes/default.css"><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({
+	skipStartupTypeset: true,
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: [
+            "TeX"
+        ],
+        linebreaks: {
+            automatic: true
+        },
+        EqnChunk: 10,
+        imageFont: null
+    },
+    tex2jax: { inlineMath: [["$","$"],["\\\\(","\\\\)"]], displayMath: [["$$","$$"],["\\[","\\]"]], processEscapes: true },
+    TeX: $.extend({
+        noUndefined: {
+            attributes: {
+                mathcolor: "red",
+                mathbackground: "#FFEEEE",
+                mathsize: "90%"
+            }
+        },
+        Safe: {
+            allow: {
+                URLs: "safe",
+                classes: "safe",
+                cssIDs: "safe",
+                styles: "safe",
+                fontsize: "all"
+            }
+        }
+    }, undefined),
+    messageStyle: "none"
+});
+</script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mathjax" src="https://stackedit.io/res-min/../res/bower-libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script><style type="text/css">@media (min-width: 0px) {
+body {
+  margin: 20px
+}
+#wmd-input {
+   font-size: 16px;
+}
+#preview-contents {
+   font-size: 16px;
+}
+}@media (min-width: 600px) {
+#wmd-input {
+   font-size: 17px;
+}
+#preview-contents {
+   font-size: 17px;
+}
+}@media (min-width: 1200px) {
+#wmd-input {
+   font-size: 18px;
+}
+#preview-contents {
+   font-size: 18px;
+}
+}</style><style type="text/css">@keyframes working-indicator-bar0 {
+    0% { opacity:0.25; }
+    0.01% { opacity:0.25; }
+    0.02% { opacity:1; }
+    50.01% { opacity:0.25; }
+    100% { opacity:0.25; }
+}@-webkit-keyframes working-indicator-bar0 {
+    0% { opacity:0.25; }
+    0.01% { opacity:0.25; }
+    0.02% { opacity:1; }
+    50.01% { opacity:0.25; }
+    100% { opacity:0.25; }
+}@keyframes working-indicator-bar1 {
+    0% { opacity:0.25; }
+    20.01% { opacity:0.25; }
+    20.02% { opacity:1; }
+    70.01% { opacity:0.25; }
+    100% { opacity:0.25; }
+}@-webkit-keyframes working-indicator-bar1 {
+    0% { opacity:0.25; }
+    20.01% { opacity:0.25; }
+    20.02% { opacity:1; }
+    70.01% { opacity:0.25; }
+    100% { opacity:0.25; }
+}@keyframes working-indicator-bar2 {
+    0% { opacity:0.25; }
+    40.01% { opacity:0.25; }
+    40.02% { opacity:1; }
+    90.01% { opacity:0.25; }
+    100% { opacity:0.25; }
+}@-webkit-keyframes working-indicator-bar2 {
+    0% { opacity:0.25; }
+    40.01% { opacity:0.25; }
+    40.02% { opacity:1; }
+    90.01% { opacity:0.25; }
+    100% { opacity:0.25; }
+}</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">.MathJax_Preview .MJXc-math {color: inherit!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script type="text/javascript" charset="utf-8" async="" src="https://platform.twitter.com/js/button.aec556e1a316f63b43fda3ae1e6a3e10.js"></script><style type="text/css">.MJXc-script {font-size: .8em}
+.MJXc-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXc-bold {font-weight: bold}
+.MJXc-italic {font-style: italic}
+.MJXc-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-largeop {font-size: 150%}
+.MJXc-largeop.MJXc-int {vertical-align: -.2em}
+.MJXc-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXc-display {display: block; text-align: center; margin: 1em 0}
+.MJXc-math span {display: inline-block}
+.MJXc-box {display: block!important; text-align: center}
+.MJXc-box:after {content: " "}
+.MJXc-rule {display: block!important; margin-top: .1em}
+.MJXc-char {display: block!important}
+.MJXc-mo {margin: 0 .15em}
+.MJXc-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXc-denom {display: inline-table!important; width: 100%}
+.MJXc-denom > * {display: table-row!important}
+.MJXc-surd {vertical-align: top}
+.MJXc-surd > * {display: block!important}
+.MJXc-script-box > *  {display: table!important; height: 50%}
+.MJXc-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXc-script-box > *:last-child > * {vertical-align: bottom}
+.MJXc-script-box > * > * > * {display: block!important}
+.MJXc-mphantom {visibility: hidden}
+.MJXc-munderover {display: inline-table!important}
+.MJXc-over {display: inline-block!important; text-align: center}
+.MJXc-over > * {display: block!important}
+.MJXc-munderover > * {display: table-row!important}
+.MJXc-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXc-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXc-mtr {display: table-row!important}
+.MJXc-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXc-mtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-mlabeledtr {display: table-row!important}
+.MJXc-mlabeledtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mlabeledtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXc-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXc-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXc-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXc-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXc-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXc-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXc-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXc-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXc-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXc-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_CHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?rev=2.5.3') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">@font-face {font-family: MathJax_AMS; src: url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff?rev=2.5.3') format('woff'), url('https://stackedit.io/res/bower-libs/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf?rev=2.5.3') format('opentype')}
+</style></head>
+<body>
+<h2 id="keyrelay-merge-faq">Key/Relay Merge FAQ</h2>
+
+<ul>
+<li><p><a href="#what-is-the-merge-logic">What is the merge logic?</a></p></li>
+<li><p><a href="#are-we-merging-into-the-key-or-into-relay-or-is-the-end-result-something-different">Are we merging into the Key or into Relay? Or is the end result something different?</a></p></li>
+<li><p><a href="#either-way-will-i-still-have-admin-access-afterwards">Either way will I still have admin access afterwards?</a></p></li>
+<li><p><a href="#do-we-need-to-do-anything-with-our-sites-weve-set-up-using-various-cas-plugins-to-authenticate-against-the-key">Do we need to do anything with our sites we've set up using various CAS plugins to authenticate against the Key?</a></p></li>
+<li><p><a href="#is-there-anything-youll-need-us-to-do">Is there anything you'll need us to do?</a></p></li>
+<li><p><a href="#what-does-that-mean-in-terms-of-single-sign-on-will-things-still-be-separate-then-if-say-i-were-logged-into-the-us-staff-web-and-then-opened-gma-in-another-tab-or-would-gma-think-i-was-already-logged-in-with-my-relay-account">What does that mean in terms of single sign on?</a></p></li>
+<li><p><a href="#if-so-will-there-be-a-way-for-users-to-merge-key-accounts-and-relay-accounts-that-have-different-use-names">Will there be a way for users to merge key accounts and relay accounts that have different use names?</a></p></li>
+<li><p><a href="#if-the-two-products-are-going-to-use-a-single-database-that-is-joining-all-the-records-together-does-that-mean-every-account-in-the-key-without-a-corresponding-relay-record-will-become-a-relay-account-and-vice-versa">If the two products are going to use a single database that is joining all the records together - does that mean every account in the key without a corresponding relay record will become a relay account and vice versa?</a></p></li>
+<li><p><a href="#what-happens-with-the-guids-in-the-cases-where-the-user-name-is-the-same-in-both-systems-how-will-it-pick-which-one-to-keep">What happens with the GUIDs in the cases where the user name is the same in both systems? How will it pick which one to keep?</a></p></li>
+<li><p><a href="#what-about-accounts-that-arent-in-our-domain-a-lot-of-people-have-used-gmail-yahoo-and-a-lot-of-others-for-the-key">What about accounts that aren't in our domain? A lot of people have used gmail, yahoo and a lot of others for the Key.</a></p></li>
+<li><p><a href="#but-lets-say-the-key-user-name-and-the-relay-user-names-arent-only-different-in-the-domain-part-of-the-address-what-if-i-had-john4325yahoocom-for-the-key-and-johndoecruorg-for-relay-will-there-be-a-manual-process-to-reconcile-those">But let's say the key user name and the relay user names aren't only different in the domain part of the address. What if I had john4325@yahoo.com for the Key and john.doe@cru.org for Relay? Will there be a manual process to reconcile those?</a></p></li>
+<li><p><a href="#can-i-specify-that-all-users-of-my-domain-eg-agapefranceorg-keep-their-the-key-usernamepassword-regardless-of-other-logic">Can I specify that all users of my domain (e.g. @agapefrance.org) keep their Key username regardless of other logic?</a></p></li>
+<li><p><a href="#is-there-any-impact-on-the-people-who-log-into-the-key-using-facebook">Is there any impact on the people who log into the key using facebook?</a></p></li>
+</ul>
+
+<hr>
+
+<h4 id="what-is-the-merge-logic">What is the merge logic?</h4>
+
+<p><a href="https://docs.google.com/drawings/d/1fPTKAJyRuVFW4FuYWej3lItIDOrvxnuU1YuodREIsGQ/edit?usp=sharing">Have a look at this flow chart</a></p>
+
+<hr>
+
+<h4 id="are-we-merging-into-the-key-or-into-relay-or-is-the-end-result-something-different">Are we merging into the Key or into Relay? Or is the end result something different?</h4>
+
+<p>Neither. We're unifying the database that stores the usernames and passwords so that Key and Relay credentials will always be the same. Key and Relay will both continue to exist after Phase 1. The only implication of Phase 1 is that your username and password in both systems will become the same thing, and changing your username/password in one system will change it in the other. </p>
+
+<hr>
+
+<h4 id="either-way-will-i-still-have-admin-access-afterwards">Either way will I still have admin access afterwards?</h4>
+
+<p>If you had admin access before, you'll still have it after. The Key and all of it's admin tools will continue to exist and operate as they have. </p>
+
+<hr>
+
+<h4 id="do-we-need-to-do-anything-with-our-sites-weve-set-up-using-various-cas-plugins-to-authenticate-against-the-key">Do we need to do anything with our sites we've set up using various CAS plugins to authenticate against the Key?</h4>
+
+<p>No. Nothing is changing with how sites integrate with The Key.</p>
+
+<hr>
+
+<h4 id="is-there-anything-youll-need-us-to-do">Is there anything you'll need us to do?</h4>
+
+<p>There's nothing you need to do beyond being aware of the unification of credentials and helping communicate/educate those around you.</p>
+
+<hr>
+
+<h4 id="what-does-that-mean-in-terms-of-single-sign-on-will-things-still-be-separate-then-if-say-i-were-logged-into-the-us-staff-web-and-then-opened-gma-in-another-tab-or-would-gma-think-i-was-already-logged-in-with-my-relay-account">What does that mean in terms of single sign on? Will things still be separate then if say I were logged into the US staff web and then opened GMA in another tab? Or would GMA think I was already logged in with my relay account?</h4>
+
+<p>There will be “same sign on” between relay and key sites. Meaning it'll behave the same way it does now (not detect that you're already logged in). </p>
+
+<hr>
+
+<h4 id="if-so-will-there-be-a-way-for-users-to-merge-key-accounts-and-relay-accounts-that-have-different-use-names">If so will there be a way for users to merge key accounts and relay accounts that have different use names?</h4>
+
+<p>This will be happening automatically in some cases. <a href="https://docs.google.com/drawings/d/1fPTKAJyRuVFW4FuYWej3lItIDOrvxnuU1YuodREIsGQ/edit?usp=sharing">Have a look at this flow chart.</a> If the accounts don't get merged automatically, you'll end up with 2 (or more) accounts that both work in Relay and Key.</p>
+
+<hr>
+
+<h4 id="if-the-two-products-are-going-to-use-a-single-database-that-is-joining-all-the-records-together-does-that-mean-every-account-in-the-key-without-a-corresponding-relay-record-will-become-a-relay-account-and-vice-versa">If the two products are going to use a single database that is joining all the records together - does that mean every account in the key without a corresponding relay record will become a relay account and vice versa?</h4>
+
+<p>Yes</p>
+
+<hr>
+
+<h4 id="what-happens-with-the-guids-in-the-cases-where-the-user-name-is-the-same-in-both-systems-how-will-it-pick-which-one-to-keep">What happens with the GUIDs in the cases where the user name is the same in both systems? How will it pick which one to keep?</h4>
+
+<p>The system will keep track of both guids and hand back the correct guid based on which login page was used. So sites using the Key login will continue to get back a key guid. Sites using relay will continue to get back a relay guid. For any new accounts created after the merge (or before the original split), it'll be the same guid.</p>
+
+<hr>
+
+<h4 id="am-i-right-in-assuming-that-my-key-password-will-then-be-my-relay-password-as-well">Am I right in assuming that my Key password will then be my Relay password as well?</h4>
+
+<p>Yes </p>
+
+<hr>
+
+<h4 id="what-about-accounts-that-arent-in-our-domain-a-lot-of-people-have-used-gmail-yahoo-and-a-lot-of-others-for-the-key">What about accounts that aren't in our domain? A lot of people have used gmail, yahoo and a lot of others for the Key.</h4>
+
+<p>This isn't a problem. Accounts from any domain will continue to work fine.</p>
+
+<hr>
+
+<h4 id="but-lets-say-the-key-user-name-and-the-relay-user-names-arent-only-different-in-the-domain-part-of-the-address-what-if-i-had-john4325yahoocom-for-the-key-and-johndoecruorg-for-relay-will-there-be-a-manual-process-to-reconcile-those">But let's say the key user name and the relay user names aren't only different in the domain part of the address. What if I had john4325@yahoo.com for the Key and john.doe@cru.org for Relay? Will there be a manual process to reconcile those?</h4>
+
+<p>In that example, after the merge, you'll still have 2 accounts. This merge process isn't going to address merging people who have 2 Key accounts, or 2 Relay accounts, or do anything magical. So it'll only ‘sync'/merge your key/relay accounts if we have some way of knowing for sure that that key login and that relay login are the same person. So, that includes: 1) all accounts created before the split (even if your usernames are now different), 2) accounts where the username is the same in both systems (only the password will change), 3) accounts where a user has done something to explicitly link the 2 accounts (this is a very small number of people).  </p>
+
+<hr>
+
+<h4 id="but-lets-say-the-key-user-name-and-the-relay-user-names-arent-only-different-in-the-domain-part-of-the-address-what-if-i-had-john4325yahoocom-for-the-key-and-johndoecruorg-for-relay-will-there-be-a-manual-process-to-reconcile-those-1">But let's say the key user name and the relay user names aren't only different in the domain part of the address. What if I had john4325@yahoo.com for the Key and john.doe@cru.org for Relay? Will there be a manual process to reconcile those?</h4>
+
+<p>In that example, after the merge, you'll still have 2 accounts. This merge process isn't going to address merging people who have 2 Key accounts, or 2 Relay accounts, or do anything magical. So it'll only ‘sync'/merge your key/relay accounts if we have some way of knowing for sure that that key login and that relay login are the same person. So, that includes: 1) all accounts created before the split (even if your usernames are now different), 2) accounts where the username is the same in both systems (only the password will change), 3) accounts where a user has done something to explicitly link the 2 accounts (this is a very small number of people).  </p>
+
+<hr>
+
+
+
+<h4 id="can-i-specify-that-all-users-of-my-domain-eg-agapefranceorg-keep-their-the-key-usernamepassword-regardless-of-other-logic">Can I specify that all users of my domain (e.g. @agapefrance.org) keep their The Key username/password regardless of other logic?</h4>
+
+<p>Yes! Send an email to Josh with your domain name and we'll ensure that all users on that domain name keep their Key credentials.</p>
+
+<hr>
+
+<h4 id="is-there-any-impact-on-the-people-who-log-into-the-key-using-facebook">Is there any impact on the people who log into the key using facebook?</h4>
+
+<p>No.</p>
+
+<hr>
+</body>
+</html>
