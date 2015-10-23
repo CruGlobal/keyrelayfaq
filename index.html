@@ -13,6 +13,7 @@
 <li><p><a href="#what-is-the-merge-logic">What is the merge logic?</a></p></li>
 <li><p><a href="#which-users-will-be-affected">Which users will be affected?</a></p></li>
 <li><p><a href="#what-can-i-do-ahead-of-time-to-prepare">What can I do ahead of time to prepare?</a></p></li>
+<li><p><a href="#">Are there constraints on us about which email is allowed as a Relay username?</a></p></li>
 <li><p><a href="#are-we-merging-into-the-key-or-into-relay-or-is-the-end-result-something-different">Are we merging into the Key or into Relay? Or is the end result something different?</a></p></li>
 <li><p><a href="#either-way-will-i-still-have-admin-access-afterwards">Either way will I still have admin access afterwards?</a></p></li>
 <li><p><a href="#do-we-need-to-do-anything-with-our-sites-weve-set-up-using-various-cas-plugins-to-authenticate-against-the-key">Do we need to do anything with our sites we’ve set up using various CAS plugins to authenticate against the Key?</a></p></li>
@@ -68,7 +69,13 @@
 
 <h4 id="what-can-i-do-ahead-of-time-to-prepare">What can I do ahead of time to prepare?</h4>
 
-<p>If you feel like it, you can go in ahead of time and make sure that your username/password on the two systems are the same. If you do that, you won’t experience any change on the day of the merge. This isn’t something we’re asking people to do, but you’re certainly welcome to do so. <em>Caveat: If your relay username is a US domain set up in Google Apps that gets provisioned via Relay, you won’t be allowed to change it.</em></p>
+<p>If you feel like it (not required), you can go in ahead of time and make sure that your username/password on the two systems are the same. If you do that, you won’t experience any change on the day of the merge. This isn’t something we’re asking people to do, but you’re certainly welcome to do so. <em>Caveat: If your relay username is a US domain set up in Google Apps that gets provisioned via Relay, you won’t be allowed to change it.</em></p>
+
+<hr>
+
+<h4 id="are-there-constraints-on-us-about-which-email-is-allowed-as-a-relay-username">Are there constraints on us about which email is allowed as a Relay username?</h4>
+
+<p>Yes. In an effort to keep things simple for staff, a decision was made when Google Apps was deployed in the US to use Relay to provision Google Accounts. For US staff, changing your Relay password changes your Google Account password. In order for this to work properly, it was necessary to add a constraint that Relay usernames must match the primary email address in Google for US staff. The most common implication of this is that US staff are required to use a @cru.org email address in Relay instead of one of the domain aliases (@uscm.org, @ccci.org, etc). Exceptions have been made for some users/domains based on requirements of secure locations. </p>
 
 <hr>
 
